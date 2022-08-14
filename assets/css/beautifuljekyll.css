@@ -642,6 +642,7 @@ footer .footer-custom-content {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  /*
   margin-top: 3.1875rem; /* The small navbar is 50px tall + 1px border */
   margin-bottom: 2.1875rem;
 }
@@ -718,12 +719,16 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   display: none;
 }
 @media (min-width: 1200px) {
+  /*
   .intro-header {
     margin-top: 8.125rem;
   }
+  */
+  /*
   .intro-header.big-img {
-    margin-top: 5.6875rem; /* Full navbar is small navbar + 20px padding on each side when expanded */
+    margin-top: 5.6875rem; /* Full navbar is small navbar + 20px padding on each side when expanded
   }
+  */
   .intro-header.big-img .page-heading,
   .intro-header.big-img .post-heading {
     padding: 9.375rem 0;
