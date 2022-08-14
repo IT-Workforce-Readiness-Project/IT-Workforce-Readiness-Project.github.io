@@ -1,5 +1,7 @@
 ---
 layout: page
+title: Flake it till you make it
+cover-img: /assets/img/hero.png
 ---
 
 My name is Inigo Montoya. I have the following qualities:
