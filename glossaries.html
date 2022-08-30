@@ -6,70 +6,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
   </head>
 
   <body>
 
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">IT Workforce Readiness Project</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Home
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="statement.html">Project Statement</a></li>
-              <li><a class="dropdown-item" href="whatis.html">What is IT</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Learning Resources
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="beginner.html">Beginner</a></li>
-              <li><a class="dropdown-item" href="it-related.html">IT Related</a></li>
-              <li><a class="dropdown-item" href="academia.html">Academia Related</a></li>
-              <li><a class="dropdown-item" href="cybersecurity.html">Cybersecurity Related</a></li>
-              <li><a class="dropdown-item" href="network-eng.html">Network Engineering Related</a></li>
-              <li><a class="dropdown-item" href="compsci-lit.html">Computer Science Literature</a></li>
-              <li><a class="dropdown-item" href="glossaries.html">Glossaries</a></li>
-              <li><a class="dropdown-item" href="games.html">Games</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Opportunities
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="organizations.html">Organizations</a></li>
-              <li><a class="dropdown-item" href="events.html">Events</a></li>
-              <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="network.html">Network</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Contributers
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="2021.html">2021-2022</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+      $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+      });
+    </script>
+    <!--end of Navigation bar-->
 
     <div class="container-fluid p-0">
       <div class="text-center" style="padding: 120px; background-size: cover; background-position: center center; background-image: url('assets/img/hero.png')">
@@ -78,21 +28,13 @@
     </div>
 
 
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <span class="text-muted">IT Workforce Readiness</span>
-        </div>
+    <div id="footer"></div>
+    <script>
+      $.get("footer.html", function(data){
+        $("#footer").replaceWith(data);
+      });
+    </script>
 
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-muted" href="https://twitter.com/it_readiness"><i class="bi bi-twitter"></i></a></li>
-          <li class="ms-3"><a class="text-muted" href="mailto: itworkforcereadinessproject@gmail.com"><i class="bi bi-envelope"></i></a></li>
-        </ul>
-      </footer>
-    </div>
 
   </body>
 
